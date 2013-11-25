@@ -8,6 +8,7 @@ td {padding: 0.4ex 1ex 0.4ex 0.5ex;}
 tr td:nth-child(1) {background-color: #d3d3ff; padding-right: 4ex;}
 tr td:nth-child(2) {background-color: #bbffee;}
 tr td:nth-child(3) {background-color: #fdf;}
+a {color: black;}
 </style>
 
 <img src="https://raw.github.com/rtoal/lmucs-senior-projects/master/lmucs.jpg">
@@ -371,17 +372,18 @@ projects for the B.S. degree in Computer Science.  Building these projects and s
 <tr><td>Tyler Nichols<td>Wutup<td>Argos
 <tr><td>Allyson Pascua<td>Wutup<td>Storyboard
 <tr><td>Sam Verhasselt<td>Wutup<td>Booktrades
-<tr><td>Andy Won<td>Wutup<td>Shop Lifter
+<tr><td>Andy Won<td>Wutup<td>ShopLifter
 
 <tr><th colspan=3>2013-2014
 <tr><th><th>401 (Ray Toal)<th>402 (B.J. Johnson)
 <tr><td>Joe Crawley<td>Chuzr<td>
-<tr><td>Thomas Costello<td>Chuzr<td>
+<tr><td>Thomas Costello<td>Chuzr<td>&mdash;
 <tr><td>Jasmine Dahilig<td>Chuzr<td>
 <tr><td>Danny Gibson<td>Chuzr<td>
 <tr><td>Kaitlyn Higa<td>Chuzr<td>
 <tr><td>Andrew Kowalczyk<td>Chuzr<td>
 <tr><td>Terran Moore<td>Chuzr<td>
+<tr><td>Graham Morgan<td>&mdash;<td>
 <tr><td>Jon Piatos<td>Chuzr<td>
 <tr><td>Lisa Rosenbaum<td>Chuzr<td>
 <tr><td>Britain Southwick<td>Chuzr<td>
@@ -457,4 +459,30 @@ projects for the B.S. degree in Computer Science.  Building these projects and s
 <tr><td>Edward Seim<td><td>
 <tr><td>Nick Soffa<td><td>
 </table>
+
+<script>
+var links = {
+    'Chuzr': 'https://github.com/rtoal/chuzr',
+    'Wutup': 'https://github.com/rtoal/wutup',
+    'Clique': 'https://github.com/Forns/clique',
+    "K'tah": 'https://github.com/rtoal/ktah',
+    'Manic Monkey Madness': 'https://code.google.com/p/manicmonkeymadness/',
+    'Serengeti': 'https://code.google.com/p/playserengeti/',
+    'Keck Wars': 'https://github.com/k-r-g/keck-wars',
+    'Cubior': 'https://github.com/BlinksTale/cubior',
+    'ShopLifter': 'https://github.com/andyjwon/ShopLifter',
+    'Cloud Palette': 'https://github.com/hodavidhara/CloudPalette',
+    'Mobile Musician': 'https://code.google.com/p/mobile-musician/',
+    'TechPad': 'https://code.google.com/p/techpad/',
+};
+
+var tds = Array.prototype.slice.call(document.getElementsByTagName('td'));
+for (var i = 0; i < tds.length; i++) {
+    var element = tds[i];
+    var name = (element.textContent || element.innerText || '').trim();
+    if (name in links) {
+        element.innerHTML = '<a href="' + links[name] + '">' + name + '</a>'
+    }
+}
+</script>
 

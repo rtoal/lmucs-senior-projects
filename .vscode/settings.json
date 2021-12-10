@@ -1,0 +1,5 @@
+{
+  "editor.parameterHints.enabled": false,
+  "html.format.enable": false,
+  "prettier.disableLanguages": ["html"]
+}
